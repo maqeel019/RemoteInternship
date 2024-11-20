@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style>
+
+body {
+    background-image: url("{% static 'DiabetesPrediction/images/imggg.jpg' %}");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff7f50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+div {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+}
+
+input[type="submit"] {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #32a852;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #28a745;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+    </style>
+</head>
+<body>
+   <div align = 'center'>
+       <h1>
+           DIABETES PREDICTION SYSTEM
+       </h1>
+       <form action = "predict">
+           <input type = "submit" value="CLICK HERE FOR THE CHECKUP!">
+       </form>
+   </div>
+</body>
+</html>

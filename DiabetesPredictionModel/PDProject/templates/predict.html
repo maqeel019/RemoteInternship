@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prediction</title>
+    <style>
+ 
+ body {
+    background-image: url("{% static 'DiabetesPrediction/images/immg.jpg' %}");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main {
+    background: rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
+    padding-right: 50px;
+    border-radius: 8px;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #ffae42;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+td {
+    padding: 8px 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+input[type="submit"] {
+    background-color: #4dc3ff;
+    color: white;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    /* margin-top: 15px; */
+    margin-left: 41px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #39a6e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.Result {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ffae42;
+    font-weight: bold;
+    margin-left: 41px;
+
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div align = 'left' class="main">
+        <h1> Please Enter the Following Information :</h1>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right">Pregnancies:</td>
+                    <td align="left"> <input type="text" name="n1"></td>
+
+                   <tr style="height: 20px;"></tr>
+
+                 <tr>
+                    <td align="right">Glucose:</td>
+                    <td align="left"> <input type="text" name="n2"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+                 <tr>
+                    <td align="right">Blood Pressure:</td>
+                    <td align="left"> <input type="text" name="n3"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+                 <tr>
+                    <td align="right">Skin Thickness:</td>
+                    <td align="left"> <input type="text" name="n4"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+                 <tr>
+                    <td align="right">Insulin:</td>
+                    <td align="left"> <input type="text" name="n5"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+                 <tr>
+                    <td align="right">BMI:</td>
+                    <td align="left"> <input type="text" name="n6"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+                 <tr>
+                    <td align="right">Diabetes Pedigree:</td>
+                    <td align="left"> <input type="text" name="n7"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+                 <tr>
+                    <td align="right">Age:</td>
+                    <td align="left"> <input type="text" name="n8"></td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+            </table>
+            <input type ="submit">
+
+        </form>
+        <div class ="Result">
+        Result : {{result2}}
+        </div>
+    </div>
+</body>
+</html>
